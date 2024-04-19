@@ -135,14 +135,13 @@ CREATE TABLE IF NOT EXISTS `mdt_clocking` (
   KEY `id` (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-CREATE TABLE IF NOT EXISTS 'mdt_legislation' (
+CREATE TABLE IF NOT EXISTS `mdt_legislation` (
   `id` int(10) NOT NULL AUTO_INCREMENT, 
   `author` varchar(50) NOT NULL DEFAULT '',
   `title` varchar(255) DEFAULT NULL,
   `type` varchar(50) DEFAULT NULL,
   `details` LONGTEXT DEFAULT NULL,
   `tags` text DEFAULT NULL,
-  `officersinvolved` text DEFAULT NULL,
   `civsinvolved` text DEFAULT NULL,
   `gallery` text DEFAULT NULL,
   `time` varchar(20) DEFAULT NULL,
