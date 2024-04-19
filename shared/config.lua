@@ -52,14 +52,14 @@ Config.RosterLink = {
 
 Config.PoliceJobs = {
     ['police'] = true,
-    ['lspd'] = true,
-    ['bcso'] = true,
-    ['sast'] = true,
-    ['sasp'] = true,
-    ['doc'] = true,
-    ['lssd'] = true,
-    ['sapr'] = true,
-    ['pa'] = true
+    ['lspd'] = false,
+    ['bcso'] = false,
+    ['sast'] = false,
+    ['sasp'] = false,
+    ['doc'] = false,
+    ['lssd'] = false,
+    ['sapr'] = false,
+    ['pa'] = false
 }
 
 Config.AmbulanceJobs = {
@@ -82,7 +82,7 @@ Config.ImpoundLocations = {
 
 -- Support for Wraith ARS 2X. 
 
-Config.UseWolfknightRadar = false
+Config.UseWolfknightRadar = true
 Config.WolfknightNotifyTime = 5000 -- How long the notification displays for in milliseconds (30000 = 30 seconds)
 Config.PlateScanForDriversLicense = false -- If true, plate scanner will check if the owner of the scanned vehicle has a drivers license
 
