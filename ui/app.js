@@ -3341,8 +3341,8 @@ $(document).ready(() => {
     let currentStatus = $(`[data-id="${info}"]`)
       .find(".unit-status")
       .html();
-    if (currentStatus == "10-8") {
-      $(`[data-id="${info}"]`).find(".unit-status").html("10-7");
+    if (currentStatus == "Available") {
+      $(`[data-id="${info}"]`).find(".unit-status").html("Unavailable");
       $(`[data-id="${info}"]`)
         .find(".unit-status")
         .removeClass("green-status")
@@ -3354,8 +3354,8 @@ $(document).ready(() => {
           status: 0,
         })
       );
-    } else if (currentStatus == "10-7") {
-      $(`[data-id="${info}"]`).find(".unit-status").html("10-8");
+    } else if (currentStatus == "Unavailable") {
+      $(`[data-id="${info}"]`).find(".unit-status").html("Available");
       $(`[data-id="${info}"]`)
         .find(".unit-status")
         .removeClass("yellow-status")
@@ -3965,8 +3965,12 @@ $(document).ready(() => {
       $(".badge-logo").attr("src", theme.image );
       $(".header-title").html(theme.name);
   }
+  /// <summary>
+  /// Sets the job colours/theme based on the job that is sent via sentJob
+  ///</summary>
   function JobColors(sentJob) {
     if (sentJob) {
+    //#region  Police
       if (PoliceJobs[sentJob] !== undefined)  {
         if (sentJob == "police") {
             applyCustomTheme(customThemes.lspd)
@@ -4045,6 +4049,7 @@ $(document).ready(() => {
         $(".weapons-nav-item").hide()
         $("#home-warrants-container").fadeOut(0);
         $("#home-reports-container").fadeIn(0);
+//#region NEHS
         if (sentJob == "ambulance") {
           applyCustomTheme(customThemes.ambulance)
         }
@@ -4106,7 +4111,10 @@ $(document).ready(() => {
         $(".vehicle-information-title").css("margin-right", "0px").css("width", "81%");
         $(".manage-incidents-title ").css("margin-right", "0px")
         $(".manage-reports-title").css("margin-right", "0px").css("width", "66%");
-      } else if (DojJobs[sentJob] !== undefined) {
+      } 
+      //#endregion NEHS
+      //#region CPS 
+        else if (DojJobs[sentJob] !== undefined) {
         applyCustomTheme(customThemes.doj)
         //$(".quote-span").html("Actually useless.");
         //$(".dmv-nav-item").hide();
@@ -4136,6 +4144,7 @@ $(document).ready(() => {
         $(".manage-reports-title").css("margin-right", "auto").css("width", "95%");
       }
     }
+    //#endregion CPS
   }
 {/* <div class="bulletin-id">ID: ${value.id}</div> */}
 window.addEventListener("message", function (event) {
@@ -4221,7 +4230,7 @@ window.addEventListener("message", function (event) {
         let activeInfoJob = `<div class="unit-job active-info-job-unk">UNKNOWN</div>`;
         if (PoliceJobs[unit.unitType] !== undefined) {
           if (unit.unitType == "police") { policeCount++;
-          activeInfoJob = `<div class="unit-job active-info-job-lspd">LSPD</div>`;
+          activeInfoJob = `<div class="unit-job active-info-job-lspd">POLICE</div>`;
           } else if(unit.unitType == "bcso")  { bcsoCount++;
             activeInfoJob = `<div class="unit-job active-info-job-bcso">BCSO</div>`;
           } else if(unit.unitType == "lssd")  { bcsoCount++;
@@ -4233,15 +4242,15 @@ window.addEventListener("message", function (event) {
           } else if(unit.unitType == "sapr")  { saspCount++;
             activeInfoJob = `<div class="unit-job active-info-job-sapr">SAPR</div>`;
           } else if(unit.unitType == "judge")  { dojCount++;
-            activeInfoJob = `<div class="unit-job active-info-job-doj">DOJ</div>`;
+            activeInfoJob = `<div class="unit-job active-info-job-doj">CPS</div>`;
           } else if(unit.unitType == "doc")  { dojCount++;
             activeInfoJob = `<div class="unit-job active-info-job-doc">DOC</div>`;
           }
         } else if (AmbulanceJobs[unit.unitType] !== undefined) {
-          activeInfoJob = `<div class="unit-job active-info-job-ambulance">Ambulance</div>`
+          activeInfoJob = `<div class="unit-job active-info-job-ambulance">NEHS</div>`
           emsCount++;
         } else if (DojJobs[unit.unitType] !== undefined) {
-          activeInfoJob = `<div class="unit-job active-info-job-doj">DOJ</div>`
+          activeInfoJob = `<div class="unit-job active-info-job-doj">CPS</div>`
           dojCount++;
         }
 
