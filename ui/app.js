@@ -3805,8 +3805,8 @@ $(document).ready(() => {
       color8: "#2554cc",
       color9: "#6E707C",
       color10: "#8F741B",
-      image: "img/LSPD.webp",
-      name: "LOS SANTOS POLICE",
+      image: "img/NERP-POLICE.png",
+      name: "NORTH'S END EMPIRE POLICE",
     },
     bcso: {
       color1: "#333333",
@@ -3903,8 +3903,8 @@ $(document).ready(() => {
       color8: "#CC2525",
       color9: "#8A8D91",
       color10: "#444444",
-      image: "img/ems_badge.webp",
-      name: "PILLBOX HILL MEDICAL CENTER",
+      image: "img/NERP-NEHS.png",
+      name: "NORTH'S END HEALTH SERVICE",
     },
     doj: {
       color1: "#553a1e",
@@ -3917,8 +3917,8 @@ $(document).ready(() => {
       color8: "#cc9225",
       color9: "#6E707C",
       color10: "#8F741B",
-      image: "img/court.webp",
-      name: "DEPARTMENT OF JUSTICE",
+      image: "img/NERP-CPS.png",
+      name: "CROWN PROSECUTION SERVICE",
     },
   }
   function applyCustomTheme(theme) {
