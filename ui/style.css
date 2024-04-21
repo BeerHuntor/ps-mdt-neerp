@@ -3013,6 +3013,10 @@ span.tag-incident-input[contenteditable]:empty::before {
     margin-left: 10px;
 }
 
+.placeholder-text-color-white::placeholder {
+    color: #FFFFFF;
+}
+
 .bolos-title {
     background-color: var(--color-4);
     color: white;
@@ -3059,7 +3063,7 @@ span.tag-incident-input[contenteditable]:empty::before {
 }
 
 #bolos-search-input::placeholder {
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .bolos-items {
@@ -3184,6 +3188,7 @@ span.tag-incident-input[contenteditable]:empty::before {
     display: flex;
     border-bottom: 2px solid var(--color-3);
 }
+
 
 .manage-bolos-input-title input {
     border: none;
@@ -3686,6 +3691,10 @@ span.officer-tag-bolo-input[contenteditable]:empty::before {
     width: 50vh;
     margin-top: 1vh;
     margin-left: 10px;
+}
+
+.dispatch-placeholder-text::placeholder {
+    color: #FFFFFF;
 }
 
 .reports-title {
