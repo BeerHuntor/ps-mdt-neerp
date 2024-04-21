@@ -4005,6 +4005,21 @@ $(document).ready(() => {
           
         $(".bolo-nav-item").html("BOLOs");
         $(".bolos-search-title").html("Bolos");
+        // ADDED STYLING
+        $(".manage-profile-info").addClass("placeholder-text-color-white");
+        $(".manage-incidents-title-input").addClass("placeholder-text-color-white");
+        $(".manage-incidents-reports-content").addClass("placeholder-text-color-white");
+        $(".manage-reports-input-title").addClass("placeholder-text-color-white");
+        $(".manage-reports-input-type").addClass("placeholder-text-color-white");
+        $(".manage-reports-reports-content").addClass("placeholder-text-color-white");
+        $(".manage-bolos-input-title").addClass("placeholder-text-color-white");
+        $(".manage-bolos-input-plate").addClass("placeholder-text-color-white");
+        $(".manage-bolos-input-owner").addClass("placeholder-text-color-white");
+        $(".manage-bolos-input-individual").addClass("placeholder-text-color-white");
+        $(".manage-bolos-reports-content").addClass("placeholder-text-color-white");
+        $(".vehicle-info-content").addClass("placeholder-text-color-white");
+        $(".weapon-info-content").addClass("placeholder-text-color-white");
+        
         $("#bolos-search-input").attr("placeholder", "Search Bolo...");
         $(".manage-bolos-title").html("Manage Bolo");
         $(".manage-bolos-editing-title").html(
