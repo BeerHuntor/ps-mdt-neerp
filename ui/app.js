@@ -22,6 +22,7 @@ let canSaveWeapon = true;
 var LastName = "";
 var DispatchNum = 0;
 var playerJob = "";
+var playerJobGrade = "";
 let rosterLink  = "";
 let sopLink = "";
 
@@ -3893,16 +3894,26 @@ $(document).ready(() => {
       name: "DEPARTMENT OF CORRECTIONS",
     },
     ambulance: {
-      color1: "#5F2121",
-      color2: "#7B2C2C",
-      color3: "#4A1C1C",
-      color4: "#5E2323",
-      color5: "#381515",
-      color6: "#2C1212",
-      color7: "#521C1C",
-      color8: "#CC2525",
-      color9: "#8A8D91",
-      color10: "#444444",
+      //color1: "#5F2121",
+      //MAIN PANELS
+      color1: "#0b3fc1", //Dark Blue
+      //color2: "#7B2C2C",
+      //CLOCK
+      color2: "#4d79ff", //Light blue
+      //OUTLINES AND HOVER
+      color3: "#4d79ff", //Lighter Brown
+      //BUTTONS NOT ACTIVE - BASE
+      color4: "#093095", //Brown
+      //DISPATCH BASE AND QUOTE BACKGROUND AND TEXT AREA BACKGROUND
+      color5: "#093095", // dark browny red - little darker
+      color6: "#2C1212", // Dark browny red
+      //MESSAGE DASHBOARD 
+      color7: "#093095", 
+      color8: "#CC2525", // Blood Red
+      //CONSTAINER BACKGROUND
+      color9: "#8A8D91", // gray (light)
+      //SMALL BUTTON BASE
+      color10: "#444444", // gray (darkish)
       image: "img/NERP-NEHS.png",
       name: "NORTH'S END HEALTH SERVICE",
     },
@@ -3988,6 +3999,10 @@ $(document).ready(() => {
           } else if (sentJob == "doc") {
             applyCustomTheme(customThemes.doc)
           }
+        
+        // $(".header-title").css("color", "#00000"); //Changes the title to black
+        // $(".header-subtitle").html("Police National Computer");
+          
         $(".bolo-nav-item").html("BOLOs");
         $(".bolos-search-title").html("Bolos");
         $("#bolos-search-input").attr("placeholder", "Search Bolo...");
@@ -4054,6 +4069,24 @@ $(document).ready(() => {
           applyCustomTheme(customThemes.ambulance)
         }
         //$(".quote-span").html("The simplest explanation is almost always somebody screwed up.");
+        /* ADDED STYLING */
+        $(".header-title").css("color", "#FFFFFF"); //Changes the title to white.
+        $(".header-subtitle").html("National Health Database");
+        $(".dispatch-input").addClass("dispatch-placeholder-text");
+        $(".manage-profile-info").addClass("placeholder-text-color-white");
+        $(".manage-bolos-input-title").addClass("placeholder-text-color-white");
+        $(".manage-bolos-input-plate").addClass("placeholder-text-color-white");
+        $(".manage-bolos-input-owner").addClass("placeholder-text-color-white");
+        $(".manage-bolos-input-individual").addClass("placeholder-text-color-white");
+        $(".manage-bolos-reports-content").addClass("placeholder-text-color-white");
+
+        $(".manage-reports-input-title").addClass("placeholder-text-color-white");
+        $(".manage-reports-input-type").addClass("placeholder-text-color-white");
+        $(".manage-reports-reports-content").addClass("placeholder-text-color-white");
+
+        
+        
+        /* END OF ADDED STYLING */
         $(".bolo-nav-item").html("ICU");
         $(".bolos-search-title").html("ICU Check-ins");
         $("#bolos-search-input").attr(
@@ -4222,7 +4255,7 @@ window.addEventListener("message", function (event) {
         if (onDutyOnly && unit.duty == 0 && unit.cid != cid) {
           return
         }
-        let status = unit.duty == 1 ? "10-8" : '10-7';
+        let status = unit.duty == 1 ? "Available" : 'Unavailable';
         let statusColor = unit.duty == 1 ? "green-status" : 'yellow-status';
         let radioBack = unit.sig100 ? "#7b2c2c" : "var(--color-3)";
         let radio = unit.radio ? unit.radio : "0";
