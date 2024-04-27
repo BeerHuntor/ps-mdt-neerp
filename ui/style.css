@@ -1740,7 +1740,7 @@ span.tag-input[contenteditable]:empty::before {
 }
 
 .gallery-image-enlarged {
-    width: 40vh;
+    width: 100vh;
     position: absolute;
     top: 20%;
     left: 25%;
