@@ -72,6 +72,9 @@ Config.DojJobs = {
     ['judge'] = true
 }
 
+Config.CouncilJobs = {
+    ['council'] = true,
+}
 -- This is a workaround solution because the qb-menu present in qb-policejob fills in an impound location and sends it to the event. 
 -- If the impound locations are modified in qb-policejob, the changes must also be implemented here to ensure consistency.
 
