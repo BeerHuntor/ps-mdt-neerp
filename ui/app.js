@@ -769,23 +769,37 @@ $(document).ready(() => {
     ".manage-incidents-create",
     function () {
       let template = `
-      <div style="color: white;">
-          <p><strong>📝 Summary:</strong></p>
-          <p><em>[Insert Report Summary Here]</em></p>
-          <p>&nbsp;</p>
-          <p><strong>🧍 Hostage:</strong> [Name Here]</p>
-          <p>&nbsp;</p>
-          <p><strong>🗄️ Evidence Location:</strong> Stash # | Drawer #</p>
-          <p>&nbsp;</p>
-          <p><strong>🔪 Weapons/Items Confiscated:</strong></p>
-          <p><em>· [Insert List Here]</em></p>
-          <p>&nbsp;</p>
-          <p>-----</p>
-          <p><strong style="background-color: var(--color-1);">💸 Fine:</strong></p>
-          <p>&nbsp;</p>
-          <p><strong>⌚ Sentence:</strong></p>
-          <p>-----</p>
-      </div>
+      <div style="color: rgb(255, 255, 255);">
+        <p>📋<strong><u>INCIDENT DETAILS</u></strong></p>
+        <p>👮‍♂️ Arresting Officer:</p>
+        <p>👮‍♂️ Processing Officer:</p>
+        <hr>
+        <strong>Evidence Details</strong>
+        <p>📋 Complete List Of Charges:</p>
+        <br>
+        <p>🛠️ Items Confiscated:</p>
+        <br>
+        <p>🔪 Weapons Confiscted:</p>
+        <br>
+        <p>📷🎥 Bodycam Evidence</p>
+        <br>
+        <hr>
+        <strong>Persons Details</strong>
+        <p>🧍 Suspect(s) Involved:</p>
+        <p>🧍 Civilian(s) Involved:</p>
+        <hr>
+        <strong>Statements</strong>
+        <p>📝 👮‍♂️Officer (NAME) Statement: <em>Give as much detail as possible...(Add/Delete as appropriate)</em></p>
+        <p>📝 👮‍♂️Officer (NAME) Statement: <em>Give as much detail as possible...(Add/Delete as appropriate)</em></p>
+        <p>📝 👮‍♂️Officer (NAME) Statement: <em>Give as much detail as possible...(Add/Delete as appropriate)</em></p>
+
+        <br>
+        <br>
+        <hr>
+        <p>💸 Fine Given</p>
+        <p>⌚ Sentence Given</p>
+        <p>🧑‍⚖️ SUSPECT PLEAD <strong>(GUILTY/NOT GUILTY/ NO CONTEST)</strong> <em>Delete as appropriate.</em></p>
+  </div>
   `;
       $("#manage-incidents-title-input").val(
         "Name - Charge - " + $(".date").html()
