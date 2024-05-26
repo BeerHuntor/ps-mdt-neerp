@@ -779,7 +779,37 @@ $(document).ready(() => {
         <br>
         <p>🛠️ Items Confiscated:</p>
         <br>
+        <p>🔪 Weapons Confiscted:</p>    <div style="color: rgb(255, 255, 255);">
+        <p>📋<strong><u>INCIDENT DETAILS</u></strong></p>
+        <p>👮‍♂️ Arresting Officer:</p>
+        <p>👮‍♂️ Processing Officer:</p>
+        <hr>
+        <strong>Evidence Details</strong>
+        <p>📋 Complete List Of Charges:</p>
+        <br>
+        <p>🛠️ Items Confiscated:</p>
+        <br>
         <p>🔪 Weapons Confiscted:</p>
+        <br>
+        <p>📷🎥 Bodycam Evidence</p>
+        <br>
+        <hr>
+        <strong>Persons Details</strong>
+        <p>🧍 Suspect(s) Involved:</p>
+        <p>🧍 Civilian(s) Involved:</p>
+        <hr>
+        <strong>Statements</strong>
+        <p>📝 👮‍♂️Officer (NAME) Statement: <em>Give as much detail as possible...(Add/Delete as appropriate)</em></p>
+        <p>📝 👮‍♂️Officer (NAME) Statement: <em>Give as much detail as possible...(Add/Delete as appropriate)</em></p>
+        <p>📝 👮‍♂️Officer (NAME) Statement: <em>Give as much detail as possible...(Add/Delete as appropriate)</em></p>
+
+        <br>
+        <br>
+        <hr>
+        <p>💸 Fine Given</p>
+        <p>⌚ Sentence Given</p>
+        <p>🧑‍⚖️ SUSPECT PLEAD <strong>(GUILTY/NOT GUILTY/ NO CONTEST)</strong> <em>Delete as appropriate.</em></p>
+    </div>
         <br>
         <p>📷🎥 Bodycam Evidence</p>
         <br>
@@ -1378,7 +1408,7 @@ $(document).ready(() => {
     ".manage-bolos-new",
     function () {
       var template = "";
-      if ($(".badge-logo").attr("src") == "img/ems_badge.webp") {
+      if ($(".badge-logo").attr("src") == "img/NERP-NEHS.png") {
         template = `
         <div style="color: white;">
             <p><strong>📝 ICU Room #: [ # ]</strong></p>
@@ -1398,6 +1428,24 @@ $(document).ready(() => {
             <p><em>· [Additional Notes Here]</em></p>
             <p>-----</p>
         </div>
+    `;
+      } else if($(".badge-logo").attr("src") == "img/NERP-POLICE.png") {
+        template = `
+        <div style="color: rgb(255, 255, 255);">
+        <p><strong>📋 Bolo Details</strong></p>
+        <p><strong>Related Incident Number:</strong> [ Incident # ]</p>
+        <p><strong>Evidence:</strong></p>
+        <br>
+        <hr>
+        <p><strong>👮‍♂️Officer(s) Involved: </strong>&nbsp;</p>
+        <br>
+        <p><strong>🧍Person(s) Involved: </strong>&nbsp;</p>
+        <p><em><br></em></p>
+        <hr>
+        <p><strong>📝 Bolo Details:</strong><br></p>
+        <p><em>Give as much detail as possible so other officers can act on in your absense.</em></p>
+    
+      </div>
     `;
       }
       $(".manage-bolos-editing-title").html(
