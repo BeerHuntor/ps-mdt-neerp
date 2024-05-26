@@ -3501,7 +3501,7 @@ $(document).ready(() => {
     currentValue.html(this.value);
   });
 
-
+//ACTIVE CALLS? 
   $(".active-calls-list").on(
     "contextmenu",
     ".active-calls-item",
@@ -4404,6 +4404,7 @@ window.addEventListener("message", function (event) {
       $(".dispatch-items").scrollTop(
         $(".dispatch-items")[0].scrollHeight
       );
+      //DISPATCH CODES
     } else if (eventData.type == "dispatchmessage") {
       const value = eventData.data;
       DispatchNum = DispatchNum + 1;
