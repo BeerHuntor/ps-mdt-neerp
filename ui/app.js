@@ -767,6 +767,7 @@ $(document).ready(() => {
   $(".manage-incidents-title-holder").on(
     "click",
     ".manage-incidents-create",
+    //INCIDENT TEMPLATE
     function () {
       let template = `
       <div style="color: rgb(255, 255, 255);">
@@ -1429,11 +1430,12 @@ $(document).ready(() => {
             <p>-----</p>
         </div>
     `;
+    //BOLO TEMPLATE PD
       } else if($(".badge-logo").attr("src") == "img/NERP-POLICE.png") {
         template = `
         <div style="color: rgb(255, 255, 255);">
         <p><strong>📋 Bolo Details</strong></p>
-        <p><strong>Related Incident Number:</strong> [ Incident # ]</p>
+        <p><strong>Related Incident/Report Number:</strong> [ Incident/Report # ]</p>
         <p><strong>Evidence:</strong></p>
         <br>
         <hr>
@@ -2506,7 +2508,7 @@ $(document).ready(() => {
     ".manage-reports-new",
     function () {
       let template = "";
-      if ($(".badge-logo").attr("src") == "img/ems_badge.webp") {
+      if ($(".badge-logo").attr("src") == "img/NERP-NEHS.png") {
         template = `
     <div style="color: white;">
         <p><strong>Submitted to ICU?: [Yes/No]</strong></p>
@@ -2525,8 +2527,28 @@ $(document).ready(() => {
         <br>
         <p><strong>Notes:</strong></p>
         <p><em>[ Additional Notes Here ]</em></p>
-    </div>
+    </div> 
+    
 `;}
+  // REPORTS TEMPLATE POLICE
+  else if ($(".badge-logo").attr("src") == "img/NERP-POLICE.png") {
+      template = `
+      <div style="color: rgb(255, 255, 255);">
+        <p><strong>📋 Report Details</strong></p>
+        <p><strong>Related Incident/BOLO Number:</strong> [ Incident/BOLO # ]</p>
+        <p><strong>Evidence:</strong></p>
+        <br>
+        <hr>
+        <p><strong>👮‍♂️Officer(s) Involved: </strong>&nbsp;</p>
+        <br>
+        <p><strong>🧍Person(s) Involved: </strong>&nbsp;</p>
+        <p><em><br></em></p>
+        <hr>
+        <p><strong>📝 Report Details:</strong><br></p>
+        <p><em>Give as much detail as possible so other officers can act on in your absense.</em></p>
+     </div>
+      `;
+}
       $(".manage-reports-editing-title").html(
         "You are currently creating a new report"
       );
