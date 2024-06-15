@@ -793,8 +793,6 @@ $(document).ready(() => {
         <p>📝 👮‍♂️Officer (NAME) Statement: <em>Give as much detail as possible...(Add/Delete as appropriate)</em></p>
         <p>📝 👮‍♂️Officer (NAME) Statement: <em>Give as much detail as possible...(Add/Delete as appropriate)</em></p>
         <p>📝 👮‍♂️Officer (NAME) Statement: <em>Give as much detail as possible...(Add/Delete as appropriate)</em></p>
-
-        <br>
         <br>
         <hr>
         <p>💸 Fine Given</p>
