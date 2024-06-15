@@ -781,16 +781,6 @@ $(document).ready(() => {
         <p>🛠️ Items Confiscated:</p>
         <br>
         <p>🔪 Weapons Confiscted:</p>    <div style="color: rgb(255, 255, 255);">
-        <p>📋<strong><u>INCIDENT DETAILS</u></strong></p>
-        <p>👮‍♂️ Arresting Officer:</p>
-        <p>👮‍♂️ Processing Officer:</p>
-        <hr>
-        <strong>Evidence Details</strong>
-        <p>📋 Complete List Of Charges:</p>
-        <br>
-        <p>🛠️ Items Confiscated:</p>
-        <br>
-        <p>🔪 Weapons Confiscted:</p>
         <br>
         <p>📷🎥 Bodycam Evidence</p>
         <br>
@@ -811,27 +801,7 @@ $(document).ready(() => {
         <p>⌚ Sentence Given</p>
         <p>🧑‍⚖️ SUSPECT PLEAD <strong>(GUILTY/NOT GUILTY/ NO CONTEST)</strong> <em>Delete as appropriate.</em></p>
     </div>
-        <br>
-        <p>📷🎥 Bodycam Evidence</p>
-        <br>
-        <hr>
-        <strong>Persons Details</strong>
-        <p>🧍 Suspect(s) Involved:</p>
-        <p>🧍 Civilian(s) Involved:</p>
-        <hr>
-        <strong>Statements</strong>
-        <p>📝 👮‍♂️Officer (NAME) Statement: <em>Give as much detail as possible...(Add/Delete as appropriate)</em></p>
-        <p>📝 👮‍♂️Officer (NAME) Statement: <em>Give as much detail as possible...(Add/Delete as appropriate)</em></p>
-        <p>📝 👮‍♂️Officer (NAME) Statement: <em>Give as much detail as possible...(Add/Delete as appropriate)</em></p>
-
-        <br>
-        <br>
-        <hr>
-        <p>💸 Fine Given</p>
-        <p>⌚ Sentence Given</p>
-        <p>🧑‍⚖️ SUSPECT PLEAD <strong>(GUILTY/NOT GUILTY/ NO CONTEST)</strong> <em>Delete as appropriate.</em></p>
-  </div>
-  `;
+    `;
       $("#manage-incidents-title-input").val(
         "Name - Charge - " + $(".date").html()
       );
