@@ -531,6 +531,9 @@ Config.PenalCode = {
         [6] = {title = 'Failing to Stop after an Accident', class = 'Either way offence', id = 'Section 170 Road Traffic Act 1988', months = 10, fine = 500, color = 'green', description = 'Failing to stop and provide details after being involved in a road traffic accident'},
         [7] = {title = 'Street Racing', class = 'Summary Offence', id = 'Section 3 Road Traffic Act 1988', months = 15, fine = 1500, color = 'green', description = 'Participating in a motor race or speed trial on a public road'},
         [8] = {title = 'Operating an un-roadworthy vehicle', class= "Summary Offense", id = 'Section 40A Road Traffic Act 1988', months = 0, fine = 350, color = 'green', description = 'Operating a vechile that is unroadworthy or deemed unsafe or in a dangerous condition on a public road'},
+        [9] = {title = '(Band A) Speeding 1-20mph above', class= "Band A Fine", id='Section 89, Road Traffic Act 1984', months= 0, fine = 250, color = 'green', description = 'Operating a vechice bewteen 1 and 20 mph above the speed limit'}, 
+        [10] = {title = '(Band B) Speeding 20-40mph above', class ="Band B Fine", id='Section 89, Road Traffic Act 1984', months = 0, fine = 500, color = 'green', description = 'Operating a vehicle between 21 and 40mph above the speed limit'}, 
+        [11] = {title = '(Band C) Speeding 41mph+ above (3-6 Points)', class ="Band C Fine", id='Section 89, Road Traffic Act 1984', months = 0, fine = 750, color = 'green', description = 'Operating a vehicle 41mph above the speed limit'} 
     },
     [10] = {
         [1] = {title = 'Hunting without a Licence', class = 'Summary Offence', id = 'Hunting Act 2004', months = 0, fine = 450, color = 'green', description = 'Hunting wild mammals without a licence'},
